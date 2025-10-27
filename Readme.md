@@ -31,14 +31,12 @@
   ```
 
 ### 附錄
-- Python 教學可以之後再學
-
+- Python 教學暫時沒有，但這個 docker 有包含執行以下語言的環境
 #### 編譯 C 語言：
 ```shell
 gcc -g -O2 -std=c17 -static -lm -o a.out MyCode.c
 ./a.out
 ```
-
 #### 執行 Python：
 ```shell
 python3 script.py
