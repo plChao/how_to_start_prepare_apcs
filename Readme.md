@@ -1,5 +1,7 @@
 # 如何準備 APCS
-
+## 參考資料
+1. [APCS 考古題](https://hackmd.io/@qshsapcs/SkFvWuHh1e)
+2. [Google drive 備份](https://drive.google.com/drive/folders/1vLWNPb_PEGV8sottJHRYyDyhkDxhULWg?usp=sharing)
 ## 課程 1：建立環境並熟悉 linux 系統
 - [ ] 下載並安裝 **Docker Desktop**
 - [ ] 下載並安裝 **VSCode**
@@ -19,19 +21,23 @@
   ```shell
   docker start -ai apcs-container
   ```
-- [ ] 編譯 C++ 程式（觀念題）：
+- [ ] 執行 Python 程式（觀念題）：
   ```shell
-  g++ -g -O2 -std=c++17 -static -lm MyCode.cpp
-  ./a.out
+  python 1_hello_word.py
   ```
 - [ ] 執行程式
 - [ ] 逐步執行程式（Debug）：
   ```shell
-  cgdb ./a.out
+  python -m pdb 2_add_bug.py
   ```
 
 ### 附錄
 - Python 教學暫時沒有，但這個 docker 有包含執行以下語言的環境
+#### 編譯 C++ 語言
+```shell
+g++ -g -O2 -std=c++17 -static -lm MyCode.cpp
+./a.out
+```
 #### 編譯 C 語言：
 ```shell
 gcc -g -O2 -std=c17 -static -lm -o a.out MyCode.c
