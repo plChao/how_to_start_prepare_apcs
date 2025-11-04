@@ -2,6 +2,7 @@
 ## 參考資料
 1. [APCS 考古題](https://hackmd.io/@qshsapcs/SkFvWuHh1e)
 2. [Google drive 備份](https://drive.google.com/drive/folders/1vLWNPb_PEGV8sottJHRYyDyhkDxhULWg?usp=sharing)
+3. [facebook - apcs 自學交流社群](https://www.facebook.com/share/g/16gTrDTkBX/)
 ## 課程 1：建立環境並熟悉 linux 系統
 - [ ] 下載並安裝 **Docker Desktop**
 - [ ] 下載並安裝 **VSCode**
@@ -47,3 +48,5 @@ gcc -g -O2 -std=c17 -static -lm -o a.out MyCode.c
 ```shell
 python3 script.py
 ```
+### Reference (參考影片)
+1. [How to Debug Your Python Code with the Python Debugger (pdb)](https://www.youtube.com/watch?v=6KQ_h0XBmxk)
