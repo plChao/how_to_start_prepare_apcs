@@ -1,28 +1,46 @@
-# 如何準備 APCS
-## 參考資料
-1. [APCS 考古題](https://hackmd.io/@qshsapcs/SkFvWuHh1e)
-2. [Google drive 備份](https://drive.google.com/drive/folders/1vLWNPb_PEGV8sottJHRYyDyhkDxhULWg?usp=sharing)
-3. [facebook - apcs 自學交流社群](https://www.facebook.com/share/g/16gTrDTkBX/)
-## 課程 1：建立環境並熟悉 linux 系統
+# 希望資工大一的我可以早點學會的技能
+> 準備 apcs 教材到一半感覺有點太難了XD
+> 改成分享如果資工大一的我會這些技能可以省很多時間
+## 用 command line 擺脫 IDE 編譯的技能
+1. 提早用 VS code 代替 Codeblocks
+2. 用 command line 編譯 (能變的選項比較多)
+3. redirect 不用每次在那邊打測資
+## 用 docker 建立虛擬 linux 的技能
+> 想當初在 WSL (windows subsystem for linux) 採了很多坑...
+1. 如果你是用 MAC 可以跳過XD
+2. 但是我還是想用 Windows 玩遊戲
+3. Virtual box 太肥了
+## gdb
+1. debug 的好工具
+## Learn by doing
+1. [Codecademy](https://www.codecademy.com/learn/learn-c-plus-plus) 
+
+## 例子: 如果我大一會這樣寫程式作業就好了
+### 建立 docker 虛擬環境
 - [ ] 下載並安裝 **Docker Desktop**
 - [ ] 下載並安裝 **VSCode**
 - [ ] 建立 Docker 環境
   ```shell
   docker build -t apcs-dev .
-  docker run -it --name apcs-container -v .:/apcs-folder apcs-dev
+  docker run -it --name apcs-container -v .:/root apcs-dev
   ```
-- [ ] 嘗試基礎 **Linux 指令**
-  - 建議觀看影片： https://www.youtube.com/watch?v=zdwmMl1GAVQ（第一段、第三段）
-
-### 附錄
-- 環境建置依據： https://apcs.csie.ntnu.edu.tw/index.php/environment/
-
-## 課程 2：回到容器、編譯與執行程式
+### 回到容器、編譯與執行程式
 - [ ] 如果容器關掉了，重新進入：
   ```shell
   docker start -ai apcs-container
   ```
-- [ ] 執行 Python 程式（觀念題）：
+### 如果是寫 C++ 作業
+- [ ] 執行 C++ 程式
+```shell
+g++ -g -O2 -std=c++17 -static -lm MyCode.cpp
+./a.out
+```
+- [ ] 逐步執行程式 (Debug):
+```shell
+cgdb ./a.out
+```
+### 如果是寫 Python 作業
+- [ ] 執行 Python 程式
   ```shell
   python 1_hello_word.py
   ```
@@ -32,21 +50,5 @@
   python -m pdb 2_add_bug.py
   ```
 
-### 附錄
-- Python 教學暫時沒有，但這個 docker 有包含執行以下語言的環境
-#### 編譯 C++ 語言
-```shell
-g++ -g -O2 -std=c++17 -static -lm MyCode.cpp
-./a.out
-```
-#### 編譯 C 語言：
-```shell
-gcc -g -O2 -std=c17 -static -lm -o a.out MyCode.c
-./a.out
-```
-#### 執行 Python：
-```shell
-python3 script.py
-```
 ### Reference (參考影片)
 1. [How to Debug Your Python Code with the Python Debugger (pdb)](https://www.youtube.com/watch?v=6KQ_h0XBmxk)
